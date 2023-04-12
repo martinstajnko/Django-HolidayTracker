@@ -1,0 +1,95 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+
+
+<!-- {% if user.is_authenticated %} -->
+<h1 class="text-center">WGF Holiday Tracker</h1>
+
+<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'core:logout' %}">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Holiday tracking dashboard -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Holiday Tracking Dashboard</h2>
+
+    <!-- Two-column layout: left for available balance, right for taken days -->
+    <div class="row text-center">
+      <div class="col-md-6">
+          <h3 class="mb-3">Available Balance</h3>
+          <p>Remaining holidays: <strong>20 days</strong></p>
+      </div>
+      <div class="col-md-6">
+          <h3 class="mb-3">Taken Days</h3>
+          <p>Taken holidays: <strong>5 days</strong></p>
+      </div>
+    </div>
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Holiday Start Date</th>
+                <th scope="col">Holiday End Date</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add your holiday tracking data rows here -->
+            <tr>
+                <td>John Doe</td>
+                <td>2023-05-01</td>
+                <td>2023-05-10</td>
+                <td>Approved</td>
+            </tr>
+            <!-- More rows as needed -->
+        </tbody>
+    </table>
+</div>
+
+
+<!-- {% else %}
+
+<h1 class="text-center">WGF Holiday Tracker</h1>
+
+<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'core:login' %}">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% endif %} -->
+
+    
+{% endblock %}
